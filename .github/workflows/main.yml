@@ -8,14 +8,13 @@ on:
 jobs:
   build:
     name: Deploy Wordpress Plugin
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
       uses: actions/checkout@v2
     - name: WordPress Plugin Deploy
-      uses: yukihiko-shinoda/action-deploy-wordpress-plugin@v2.0.0
+      uses: 10up/action-wordpress-plugin-deploy@master
       env:
-        SVN_REPOSITORY_URL: ${{ secrets.SVN_URL }}
-        SVN_USER_NAME: ${{ secrets.SVN_USERNAME }}
-        SVN_USER_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
