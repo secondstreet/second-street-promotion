@@ -1,7 +1,8 @@
 <?php
 /**
- * Plugin Name: Second Street * Description: Plugin will allow Second Street Affiliates to embed a Second Street Promotion within their WordPress site(s).
- * Version: 2.2
+ * Plugin Name: Second Street
+ * Description: Plugin will allow Second Street Affiliates to embed a Second Street Promotion within their WordPress site(s).
+ * Version: 3.0
  * Author: Second Street
  * Author URI: http://secondstreet.com
  * License: GPL2
@@ -84,7 +85,23 @@ function ss_contest_func( $atts, $content = null ) {
 
 }
 
+// [ss-feed] Code
+function ss_feed_func( $atts, $content = null ) {
+	if (empty($atts['organization_id'])) {
+		return 'Error: No organization_id parameter defined on the shortcode.';
+	}
+	
+	$a = shortcode_atts( array (
+		'organization_id' => '',
+	), $atts );
+
+	$ss_script_url = 'https://o-' . $a['organization-id'] . '.secondstreetapp.com/Scripts/dist/feed.js';
+
+	return '<script src="' . esc_url( $ss_script_url ) . '" data-ss-embed="feed" data-organization-id="' . $a['organization_id'] . '"></script>';
+}
+
 add_shortcode( 'ss-promo', 'ss_promo_func' );
 add_shortcode( 'ss-signup', 'ss_signup_func' );
 
 add_shortcode( 'ss-contest', 'ss_contest_func' );
+add_shortcode( 'ss-feed', 'ss_feed_func' );

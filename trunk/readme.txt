@@ -2,8 +2,8 @@
 Contributors: Second Street
 Tags: Page, Post, Shortcode, Promotion, Second Street, UPICKEM
 Requires at least: 3.0
-Tested up to: 4.7
-Stable tag: trunk
+Tested up to: 5.3.2
+Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,3 +39,6 @@ If you are having problems activating your plugin, please contact Second Street'
 
 = 2.2.0 =
 * Support for contest_id attribute for ss-contest shortcode
+
+= 3.0.0 =
+* Support for the ss-feed shortcode
