@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Second Street * Description: Plugin will allow Second Street Affiliates to embed a Second Street Promotion within their WordPress site(s).
- * Version: 2.1
+ * Version: 2.2
  * Author: Second Street
  * Author URI: http://secondstreet.com
  * License: GPL2
@@ -70,12 +70,17 @@ function ss_contest_func( $atts, $content = null ) {
 	$a = shortcode_atts( array (
 			'contest_url' => '',
 			'contest_folder' => '',
-			'routing' => ''
+			'routing' => '',
+			'contest_id' => ''
 	), $atts );
 
 	$ss_script_url =  $a['contest_url'] . '/' . 'shared/embedcode/embed.js';
 
-	return '<script type="text/javascript" src="' . esc_attr( $a['contest_url'] ) . '/shared/embedcode/talker-v1.0.0.js"></script><script src="' . esc_url( $ss_script_url ) . '" data-ss-embed="contest" data-routing="' . esc_attr( $a['routing'] ) . '"></script>';
+	if (esc_attr( $a['contest_id'] ) != '') { //Old Engine contests will pass contest_id
+		return '<script type="text/javascript" src="' . esc_attr( $a['contest_url'] ) . '/shared/embedcode/talker-v1.0.0.js"></script><script src="' . esc_url( $ss_script_url ) . '" data-ss-embed="contest" data-routing="' . esc_attr( $a['routing'] ) . '" data-contest-id="' . esc_attr( $a['contest_id'] ) . '"></script>';
+	} else {
+		return '<script type="text/javascript" src="' . esc_attr( $a['contest_url'] ) . '/shared/embedcode/talker-v1.0.0.js"></script><script src="' . esc_url( $ss_script_url ) . '" data-ss-embed="contest" data-routing="' . esc_attr( $a['routing'] ) . '"></script>';
+	}
 
 }
 
