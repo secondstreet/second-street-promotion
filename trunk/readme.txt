@@ -42,3 +42,6 @@ If you are having problems activating your plugin, please contact Second Street'
 
 = 3.0.0 =
 * Support for the ss-feed shortcode
+
+= 3.0.1 =
+* Release management to work with CI pipeline
