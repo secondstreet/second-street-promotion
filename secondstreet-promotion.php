@@ -88,11 +88,17 @@ function ss_feed_func( $atts, $content = null ) {
 	
 	$a = shortcode_atts( array (
 		'organization_id' => '',
+		'dev' => '',
 	), $atts );
 
-	$ss_script_url = 'https://o-' . $a['organization_id'] . '.secondstreetapp.com/Scripts/dist/feed.js';
+	$ss_script_url_prefix = 'https://o-' . $a['organization_id'];
+	$ss_script_url_suffix = '.secondstreetapp.com/Scripts/dist/feed.js';
 
-	return '<script src="' . esc_url( $ss_script_url ) . '" data-ss-embed="feed" data-organization-id="' . $a['organization_id'] . '"></script>';
+	if ( $a['dev'] === 'true' ) {
+		return '<script src="' . esc_url( $ss_script_url_prefix . '.dev' . $ss_script_url_suffix ) . '" data-ss-embed="feed" data-organization-id="' . $a['organization_id'] . '"></script>';
+	} else {
+		return '<script src="' . esc_url( $ss_script_url_prefix . $ss_script_url_suffix ) . '" data-ss-embed="feed" data-organization-id="' . $a['organization_id'] . '"></script>';
+	}
 }
 
 // [ss-preferences] Code
