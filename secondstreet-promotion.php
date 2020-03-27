@@ -40,13 +40,18 @@ function ss_promo_func( $atts, $content = null ) {
 	$a = shortcode_atts( array (
 			'op_id' => '',
 			'op_guid' => '',
-			'routing' => ''
+			'routing' => '',
+			'dev' => ''
 		), $atts );
 
-	$ss_script_url = 'https://embed-' . $a['op_id'] . '.secondstreetapp.com/Scripts/dist/embed.js';
+	$ss_script_url_prefix = 'https://embed' . $a['op_id'];
+	$ss_script_url_suffix = '.secondstreetapp.com/Scripts/dist/embed.js';
 
-	return '<script src="' . esc_url( $ss_script_url ) . '" data-ss-embed="promotion" data-opguid="' . esc_attr( $a['op_guid'] ) . '" data-routing="' . esc_attr( $a['routing'] ) . '"></script>';
-
+	if ( $a['dev'] === 'true' ) {
+		return '<script src="' . esc_url( $ss_script_url_prefix . '.dev' . $ss_script_url_suffix ) . '" data-ss-embed="feed" data-organization-id="' . $a['organization_id'] . '"></script>';
+	} else {
+		return '<script src="' . esc_url( $ss_script_url_prefix . '-' . $a['op_id'] . $ss_script_url_suffix ) . '" data-ss-embed="promotion" data-opguid="' . esc_attr( $a['op_guid'] ) . '" data-routing="' . esc_attr( $a['routing'] ) . '"></script>';
+	}
 }
 
 // [ss-signup] Code
@@ -88,7 +93,7 @@ function ss_feed_func( $atts, $content = null ) {
 	
 	$a = shortcode_atts( array (
 		'organization_id' => '',
-		'dev' => '',
+		'dev' => ''
 	), $atts );
 
 	$ss_script_url_prefix = 'https://o-' . $a['organization_id'];
