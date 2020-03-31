@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Second Street
  * Description: Plugin will allow Second Street Affiliates to embed a Second Street Promotion within their WordPress site(s).
- * Version: 3.1.4
+ * Version: 3.1.5
  * Author: Second Street
  * Author URI: http://secondstreet.com
  * License: GPL2
@@ -48,7 +48,7 @@ function ss_promo_func( $atts, $content = null ) {
 	$ss_script_url_suffix = '.secondstreetapp.com/Scripts/dist/embed.js';
 
 	if ( $a['dev'] === 'true' ) {
-		return '<script src="' . esc_url( $ss_script_url_prefix . 'dev' . $ss_script_url_suffix ) . '" data-ss-embed="feed" data-organization-id="' . $a['organization_id'] . '"></script>';
+		return '<script src="' . esc_url( $ss_script_url_prefix . 'dev' . $ss_script_url_suffix ) . '" data-ss-embed="promotion" data-opguid="' . esc_attr( $a['op_guid'] ) . '" data-routing="' . esc_attr( $a['routing'] ) . '"></script>';
 	} else {
 		return '<script src="' . esc_url( $ss_script_url_prefix . '-' . $a['op_id'] . $ss_script_url_suffix ) . '" data-ss-embed="promotion" data-opguid="' . esc_attr( $a['op_guid'] ) . '" data-routing="' . esc_attr( $a['routing'] ) . '"></script>';
 	}

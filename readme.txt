@@ -43,5 +43,5 @@ If you are having problems activating your plugin, please contact Second Street'
 = 3.0.0 =
 * Support for the ss-feed shortcode
 
-= 3.1.4 =
+= 3.1.5 =
 * Support for the ss-preferences shortcode
