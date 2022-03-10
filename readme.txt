@@ -29,7 +29,7 @@ The Second Street Plugin allows you to embed your Second Street content on your 
 
 = I cannot activate the Second Street Plugin. What should I do? =
 
-If you are having problems activating your plugin, please contact Second Street's [Support Department](http://affiliatesupport@secondstreet.com) to ask for help.
+If you are having problems activating your plugin, please contact Second Street's [Support Department](secondstreet-support@uplandsoftware.com), or give us a call at (877-843-2900) to ask for help.
 
 
 == Changelog == 
