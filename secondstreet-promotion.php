@@ -8,7 +8,7 @@
  * License: GPL2
  */
 
-/*  Copyright 2014  Second Street (email : wordpress@secondstreet.com)
+/*  Copyright 2022  Second Street (email : wordpressdevelopment@uplandsoftware.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
