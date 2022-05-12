@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Second Street
  * Description: Plugin will allow Second Street Affiliates to embed a Second Street Promotion within their WordPress site(s).
- * Version: 3.1.6
+ * Version: 3.1.7
  * Author: Second Street
  * Author URI: http://secondstreet.com
  * License: GPL2
