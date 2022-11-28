@@ -49,5 +49,5 @@ If you are having problems activating your plugin, please contact Second Street'
 = 3.1.7 =
 * Escape echoed data to help prevent XSS attacks
 
-= 3.1.7 =
+= 3.1.8 =
 * Version update
