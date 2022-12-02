@@ -3,7 +3,7 @@ Contributors: Second Street
 Tags: Page, Post, Shortcode, Promotion, Second Street, UPICKEM
 Requires at least: 3.0
 Tested up to: 5.9.2
-Stable tag: 3.1.7
+Stable tag: 3.1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,4 +47,7 @@ If you are having problems activating your plugin, please contact Second Street'
 * Support for the ss-preferences shortcode
 
 = 3.1.7 =
-* Escape echoed data to help prevent XSS attacks 
+* Escape echoed data to help prevent XSS attacks
+
+= 3.1.8 =
+* Version update
