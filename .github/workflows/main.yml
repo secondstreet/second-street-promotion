@@ -12,8 +12,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+
     - name: WordPress Plugin Deploy
-      uses: 10up/action-wordpress-plugin-deploy@master
+      # Switch to master whenever version 2.2.0 is released
+      # https://github.com/10up/action-wordpress-plugin-deploy/milestone/7
+      uses: 10up/action-wordpress-plugin-deploy@develop
       env:
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
         SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
