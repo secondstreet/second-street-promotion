@@ -3,7 +3,7 @@ Contributors: Second Street
 Tags: Page, Post, Shortcode, Promotion, Second Street, UPICKEM
 Requires at least: 3.0
 Tested up to: 6.1.1
-Stable tag: 3.1.9
+Stable tag: 3.1.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,12 +17,12 @@ The Second Street Plugin allows you to embed your Second Street content on your 
 == Installation ==
 
 1. Extract files from the ZIP file.
-2. Upload `secondstreet-promotion` folder (contains `secondstreet-promotion.php`) 
+2. Upload `secondstreet-promotion` folder (contains `secondstreet-promotion.php`)
    to the `/wp-content/plugins/` directory.
 3. Activate the plugin through the 'Plugins' menu in WordPress.
-4. Retrieve (copy) your Promotion's Shortcode from your Second Street Partner Tool. 
-   (Login to your Second Street account at https://partners.secondstreet.com/) 
-5. Place (paste) your Shortcode into the page content area in your WordPress site. 
+4. Retrieve (copy) your Promotion's Shortcode from your Second Street Partner Tool.
+   (Login to your Second Street account at https://partners.secondstreet.com/)
+5. Place (paste) your Shortcode into the page content area in your WordPress site.
 
 
 == Frequently Asked Questions ==
@@ -32,7 +32,7 @@ The Second Street Plugin allows you to embed your Second Street content on your 
 If you are having problems activating your plugin, please contact Second Street's [Support Department](secondstreet-support@uplandsoftware.com), or give us a call at (877-843-2900) to ask for help.
 
 
-== Changelog == 
+== Changelog ==
 
 = 2.1.0 =
 * Support for ss-promo, ss-signup, and ss-contest shortcodes
@@ -54,3 +54,6 @@ If you are having problems activating your plugin, please contact Second Street'
 
 = 3.1.9 =
 * Version update
+
+= 3.1.10 =
+* Add ability to specific `top_offset` and `bottom_offset` for ss-promo shortcode
