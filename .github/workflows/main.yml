@@ -14,13 +14,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-      # Workaround for: detected dubious ownership in repository at '/github/workspace' issue.
-      # see: https://github.com/10up/action-wordpress-plugin-deploy/issues/116
-      # Mark github workspace as safe directory.
-    - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
-
     - name: WordPress Plugin Deploy
-      uses: 10up/action-wordpress-plugin-deploy@master
+      uses: 10up/action-wordpress-plugin-deploy@develop
       env:
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
         SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
