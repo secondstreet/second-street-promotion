@@ -2,8 +2,8 @@
 Contributors: Second Street
 Tags: Page, Post, Shortcode, Promotion, Second Street, UPICKEM
 Requires at least: 3.0
-Tested up to: 6.1.1
-Stable tag: 3.1.10
+Tested up to: 6.3
+Stable tag: 3.1.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,3 +57,6 @@ If you are having problems activating your plugin, please contact Second Street'
 
 = 3.1.10 =
 * Add ability to specific `top_offset` and `bottom_offset` for ss-promo shortcode
+
+= 3.1.11 =
+* Version update
