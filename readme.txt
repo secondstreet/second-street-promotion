@@ -2,7 +2,7 @@
 Contributors: Second Street
 Tags: Page, Post, Shortcode, Promotion, Second Street, UPICKEM
 Requires at least: 3.0
-Tested up to: 6.5
+Tested up to: 6.6
 Stable tag: 3.1.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
