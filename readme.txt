@@ -66,3 +66,6 @@ If you are having problems activating your plugin, please contact Second Street'
 
 = 3.1.13 =
 * Version update
+
+= 3.1.14 =
+* Version update
