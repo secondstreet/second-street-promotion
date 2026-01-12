@@ -2,8 +2,8 @@
 Contributors: Second Street
 Tags: Page, Post, Shortcode, Promotion, Second Street, UPICKEM
 Requires at least: 3.0
-Tested up to: 6.8.2
-Stable tag: 3.1.21
+Tested up to: 6.9
+Stable tag: 3.1.22
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,4 +89,7 @@ If you are having problems activating your plugin, please contact Second Street'
 * Version update
 
 = 3.1.21 =
+* Version update
+
+= 3.1.22 =
 * Version update
